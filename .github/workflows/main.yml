@@ -1,0 +1,7 @@
+docker run -d --name php-epg \
+  -p 5678:80 \
+  -v $HOME/epg:/htdocs/data \
+  -e PHP_MEMORY_LIMIT=512M \
+  -e ENABLE_FFMPEG=false \
+  --restart unless-stopped \
+  taksss/php-epg:latest
